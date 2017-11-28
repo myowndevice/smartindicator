@@ -1,0 +1,448 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:stm8
+LIBS:smart_indicator-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L STM8S003F3P U1
+U 1 1 59F1F357
+P 5200 2900
+F 0 "U1" H 4050 3700 50  0000 L CNN
+F 1 "STM8S003F3P" H 4050 3600 50  0000 L CNN
+F 2 "Housings_SSOP:SSOP-20_4.4x6.5mm_Pitch0.65mm" H 4050 2100 50  0001 L CIN
+F 3 "" H 5150 2500 50  0001 C CNN
+	1    5200 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 1750 5200 2100
+Wire Wire Line
+	5200 3800 5200 3950
+$Comp
+L C_Small C2
+U 1 1 59F1F42A
+P 5400 1950
+F 0 "C2" H 5410 2020 50  0000 L CNN
+F 1 "100n" H 5410 1870 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 5400 1950 50  0001 C CNN
+F 3 "" H 5400 1950 50  0001 C CNN
+	1    5400 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C3
+U 1 1 59F1F443
+P 5600 1950
+F 0 "C3" H 5610 2020 50  0000 L CNN
+F 1 "10uf" H 5610 1870 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5600 1950 50  0001 C CNN
+F 3 "" H 5600 1950 50  0001 C CNN
+	1    5600 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C1
+U 1 1 59F1F48F
+P 3700 3600
+F 0 "C1" H 3710 3670 50  0000 L CNN
+F 1 "1uf" H 3710 3520 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3700 3600 50  0001 C CNN
+F 3 "" H 3700 3600 50  0001 C CNN
+	1    3700 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 2050 5900 2050
+Connection ~ 5600 2050
+Wire Wire Line
+	5200 1850 5600 1850
+Connection ~ 5200 1850
+Connection ~ 5400 1850
+Wire Wire Line
+	3900 3500 3700 3500
+Wire Wire Line
+	3700 3700 3700 3800
+Text Label 3900 2800 2    60   ~ 0
+l1
+Text Label 3900 2900 2    60   ~ 0
+l2
+Text Label 3900 3000 2    60   ~ 0
+l3
+Text Label 3700 2700 2    60   ~ 0
+prg(serial)
+Wire Wire Line
+	3700 2700 3900 2700
+$Comp
+L LED D1
+U 1 1 59F21C16
+P 3850 5150
+F 0 "D1" H 3850 5250 50  0000 C CNN
+F 1 "LED" H 3850 5050 50  0000 C CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 3850 5150 50  0001 C CNN
+F 3 "" H 3850 5150 50  0001 C CNN
+	1    3850 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D2
+U 1 1 59F21C35
+P 3850 5350
+F 0 "D2" H 3850 5450 50  0000 C CNN
+F 1 "LED" H 3850 5250 50  0000 C CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 3850 5350 50  0001 C CNN
+F 3 "" H 3850 5350 50  0001 C CNN
+	1    3850 5350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3600 5350 3700 5350
+$Comp
+L LED D5
+U 1 1 59F21DE3
+P 3850 4700
+F 0 "D5" H 3850 4800 50  0000 C CNN
+F 1 "LED" H 3850 4600 50  0000 C CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 3850 4700 50  0001 C CNN
+F 3 "" H 3850 4700 50  0001 C CNN
+	1    3850 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 4700 4000 4700
+Wire Wire Line
+	3200 4700 3700 4700
+Text Label 3200 4700 0    60   ~ 0
+l2
+Connection ~ 3300 4700
+$Comp
+L LED D6
+U 1 1 59F21E02
+P 3850 4900
+F 0 "D6" H 3850 5000 50  0000 C CNN
+F 1 "LED" H 3850 4800 50  0000 C CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 3850 4900 50  0001 C CNN
+F 3 "" H 3850 4900 50  0001 C CNN
+	1    3850 4900
+	-1   0    0    1   
+$EndComp
+Text Notes 6600 2850 0    60   ~ 0
+тут только один св
+$Comp
+L VDDA #PWR2
+U 1 1 5A099FE1
+P 5200 1750
+F 0 "#PWR2" H 5200 1600 50  0001 C CNN
+F 1 "VDDA" H 5200 1900 50  0000 C CNN
+F 2 "" H 5200 1750 50  0001 C CNN
+F 3 "" H 5200 1750 50  0001 C CNN
+	1    5200 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDA #PWR3
+U 1 1 5A09A2B5
+P 5200 3950
+F 0 "#PWR3" H 5200 3700 50  0001 C CNN
+F 1 "GNDA" H 5200 3800 50  0000 C CNN
+F 2 "" H 5200 3950 50  0001 C CNN
+F 3 "" H 5200 3950 50  0001 C CNN
+	1    5200 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDA #PWR4
+U 1 1 5A09AA72
+P 5900 2050
+F 0 "#PWR4" H 5900 1800 50  0001 C CNN
+F 1 "GNDA" H 5900 1900 50  0000 C CNN
+F 2 "" H 5900 2050 50  0001 C CNN
+F 3 "" H 5900 2050 50  0001 C CNN
+	1    5900 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDA #PWR1
+U 1 1 5A09ADF5
+P 3700 3800
+F 0 "#PWR1" H 3700 3550 50  0001 C CNN
+F 1 "GNDA" H 3700 3650 50  0000 C CNN
+F 2 "" H 3700 3800 50  0001 C CNN
+F 3 "" H 3700 3800 50  0001 C CNN
+	1    3700 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 4900 3650 4900
+Wire Wire Line
+	3650 4900 3650 4700
+Connection ~ 3650 4700
+Wire Wire Line
+	4100 4900 4100 4700
+Connection ~ 4100 4700
+Wire Wire Line
+	4000 4900 4100 4900
+Text Label 4350 4700 0    60   ~ 0
+upr1
+Text Label 4500 5150 0    60   ~ 0
+upr2
+Wire Wire Line
+	3600 5350 3600 5150
+Wire Wire Line
+	3600 5150 3700 5150
+Wire Wire Line
+	3300 5250 3600 5250
+Connection ~ 3600 5250
+Wire Wire Line
+	4200 5350 4200 5150
+Connection ~ 4200 5150
+Wire Wire Line
+	4000 5350 4200 5350
+Wire Wire Line
+	4000 5150 4500 5150
+Wire Wire Line
+	3300 5250 3300 4700
+$Comp
+L LED D7
+U 1 1 5A14269C
+P 1850 5150
+F 0 "D7" H 1850 5250 50  0000 C CNN
+F 1 "LED" H 1850 5050 50  0000 C CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 1850 5150 50  0001 C CNN
+F 3 "" H 1850 5150 50  0001 C CNN
+	1    1850 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D8
+U 1 1 5A1426A2
+P 1850 5350
+F 0 "D8" H 1850 5450 50  0000 C CNN
+F 1 "LED" H 1850 5250 50  0000 C CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 1850 5350 50  0001 C CNN
+F 3 "" H 1850 5350 50  0001 C CNN
+	1    1850 5350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1600 5350 1700 5350
+$Comp
+L LED D3
+U 1 1 5A1426A9
+P 1850 4700
+F 0 "D3" H 1850 4800 50  0000 C CNN
+F 1 "LED" H 1850 4600 50  0000 C CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 1850 4700 50  0001 C CNN
+F 3 "" H 1850 4700 50  0001 C CNN
+	1    1850 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 4700 2000 4700
+Wire Wire Line
+	1200 4700 1700 4700
+Text Label 1200 4700 0    60   ~ 0
+l1
+Connection ~ 1300 4700
+$Comp
+L LED D4
+U 1 1 5A1426B3
+P 1850 4900
+F 0 "D4" H 1850 5000 50  0000 C CNN
+F 1 "LED" H 1850 4800 50  0000 C CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 1850 4900 50  0001 C CNN
+F 3 "" H 1850 4900 50  0001 C CNN
+	1    1850 4900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1700 4900 1650 4900
+Wire Wire Line
+	1650 4900 1650 4700
+Connection ~ 1650 4700
+Wire Wire Line
+	2100 4900 2100 4700
+Connection ~ 2100 4700
+Wire Wire Line
+	2000 4900 2100 4900
+Text Label 2350 4700 0    60   ~ 0
+upr1
+Text Label 2500 5150 0    60   ~ 0
+upr2
+Wire Wire Line
+	1600 5350 1600 5150
+Wire Wire Line
+	1600 5150 1700 5150
+Wire Wire Line
+	1300 5250 1600 5250
+Connection ~ 1600 5250
+Wire Wire Line
+	2200 5350 2200 5150
+Connection ~ 2200 5150
+Wire Wire Line
+	2000 5350 2200 5350
+Wire Wire Line
+	2000 5150 2500 5150
+Wire Wire Line
+	1300 5250 1300 4700
+$Comp
+L LED D11
+U 1 1 5A142C8F
+P 5650 5150
+F 0 "D11" H 5650 5250 50  0000 C CNN
+F 1 "LED" H 5650 5050 50  0000 C CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 5650 5150 50  0001 C CNN
+F 3 "" H 5650 5150 50  0001 C CNN
+	1    5650 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D12
+U 1 1 5A142C95
+P 5650 5350
+F 0 "D12" H 5650 5450 50  0000 C CNN
+F 1 "LED" H 5650 5250 50  0000 C CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 5650 5350 50  0001 C CNN
+F 3 "" H 5650 5350 50  0001 C CNN
+	1    5650 5350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5400 5350 5500 5350
+$Comp
+L LED D9
+U 1 1 5A142C9C
+P 5650 4700
+F 0 "D9" H 5650 4800 50  0000 C CNN
+F 1 "LED" H 5650 4600 50  0000 C CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 5650 4700 50  0001 C CNN
+F 3 "" H 5650 4700 50  0001 C CNN
+	1    5650 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 4700 5800 4700
+Wire Wire Line
+	5000 4700 5500 4700
+Text Label 5000 4700 0    60   ~ 0
+l3
+Connection ~ 5100 4700
+$Comp
+L LED D10
+U 1 1 5A142CA6
+P 5650 4900
+F 0 "D10" H 5650 5000 50  0000 C CNN
+F 1 "LED" H 5650 4800 50  0000 C CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 5650 4900 50  0001 C CNN
+F 3 "" H 5650 4900 50  0001 C CNN
+	1    5650 4900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5500 4900 5450 4900
+Wire Wire Line
+	5450 4900 5450 4700
+Connection ~ 5450 4700
+Wire Wire Line
+	5900 4900 5900 4700
+Connection ~ 5900 4700
+Wire Wire Line
+	5800 4900 5900 4900
+Text Label 6150 4700 0    60   ~ 0
+upr1
+Text Label 6300 5150 0    60   ~ 0
+upr2
+Wire Wire Line
+	5400 5350 5400 5150
+Wire Wire Line
+	5400 5150 5500 5150
+Wire Wire Line
+	5100 5250 5400 5250
+Connection ~ 5400 5250
+Wire Wire Line
+	6000 5350 6000 5150
+Connection ~ 6000 5150
+Wire Wire Line
+	5800 5350 6000 5350
+Wire Wire Line
+	5800 5150 6300 5150
+Wire Wire Line
+	5100 5250 5100 4700
+Text Label 3400 3100 2    60   ~ 0
+upr1
+Text Label 3400 3200 2    60   ~ 0
+upr2
+$Comp
+L R_Small R1
+U 1 1 5A1434A9
+P 3650 3100
+F 0 "R1" V 3550 3050 50  0000 L CNN
+F 1 "200" V 3650 3050 50  0000 L CNN
+F 2 "" H 3650 3100 50  0001 C CNN
+F 3 "" H 3650 3100 50  0001 C CNN
+	1    3650 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L R_Small R2
+U 1 1 5A143522
+P 3650 3200
+F 0 "R2" V 3750 3150 50  0000 L CNN
+F 1 "200" V 3650 3150 50  0000 L CNN
+F 2 "" H 3650 3200 50  0001 C CNN
+F 3 "" H 3650 3200 50  0001 C CNN
+	1    3650 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3900 3200 3750 3200
+Wire Wire Line
+	3750 3100 3900 3100
+Wire Wire Line
+	3400 3100 3550 3100
+Wire Wire Line
+	3400 3200 3550 3200
+$EndSCHEMATC
